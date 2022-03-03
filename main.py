@@ -36,14 +36,56 @@ from matplotlib import style
 # plt.show()
 # ----------------
 # Signal 3:
+#start = -5
+#end = 10
+#x1 = np.linspace(start, end, end - start + 1)
+#y1 = np.exp(3*x1) * np.heaviside(x1, 2) + 2 * (np.heaviside(x1, 1) - np.heaviside(x1, -1))
+#style.use('ggplot')
+#plt.stem(x1, y1)
+#plt.title('3')
+#plt.xlabel('X-Axis')
+#plt.ylabel('Y-Axis')
+#plt.legend()
+#plt.show()
+# ----------------
+# Signal 4:
+# start = -5
+# end = 5
+# step = 0.01
+# x1 = np.linspace(start, end, int((end - start)/step))
+# y1 = np.heaviside(x1, -2) - np.heaviside(x1, 2)
+# style.use('ggplot')
+# plt.plot(x1, y1)
+# plt.title('4')
+# plt.xlabel('X-Axis')
+# plt.ylabel('Y-Axis')
+# plt.legend()
+# plt.show()
+# ----------------
+# Signal 5:
+# start = -5
+# end = 5
+# x1 = np.linspace(start, end, end-start+1)
+# y1 = np.cos(3*x1)
+# style.use('ggplot')
+# plt.stem(x1, y1)
+# plt.title('5')
+# plt.xlabel('X-Axis')
+# plt.ylabel('Y-Axis')
+# plt.legend()
+# plt.show()
+# ----------------
+# Signal 6:
 start = -5
-end = 10
-x1 = np.linspace(start, end, end - start + 1)
-y1 = np.exp(3*x1) * np.heaviside(x1, 2) + 2 * (np.heaviside(x1, 1) - np.heaviside(x1, -1))
+end = 5
+x1 = np.linspace(start, end, end-start+1)
+y1 = np.cos(3 * np.pi * x1)
 style.use('ggplot')
 plt.stem(x1, y1)
-plt.title('3')
+plt.title('6')
 plt.xlabel('X-Axis')
 plt.ylabel('Y-Axis')
 plt.legend()
 plt.show()
+
+
