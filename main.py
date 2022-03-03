@@ -34,3 +34,16 @@ from matplotlib import style
 # plt.ylabel('Y-Axis')
 # plt.legend()
 # plt.show()
+# ----------------
+# Signal 3:
+start = -5
+end = 10
+x1 = np.linspace(start, end, end - start + 1)
+y1 = np.exp(3*x1) * np.heaviside(x1, 2) + 2 * (np.heaviside(x1, 1) - np.heaviside(x1, -1))
+style.use('ggplot')
+plt.stem(x1, y1)
+plt.title('3')
+plt.xlabel('X-Axis')
+plt.ylabel('Y-Axis')
+plt.legend()
+plt.show()
