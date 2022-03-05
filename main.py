@@ -64,8 +64,8 @@ from matplotlib import style
 # plt.show()
 # ----------------
 # Signal 5:
-# start = -5
-# end = 5
+# start = -10
+# end = 10
 # x1 = np.linspace(start, end, end-start+1)
 # y1 = np.cos(3*x1)
 # style.use('ggplot')
@@ -77,8 +77,8 @@ from matplotlib import style
 # plt.show()
 # ----------------
 # Signal 6:
-# start = -5
-# end = 5
+# start = -10
+# end = 10
 # x1 = np.linspace(start, end, end-start+1)
 # y1 = np.cos(3 * np.pi * x1)
 # style.use('ggplot')
@@ -107,29 +107,30 @@ from matplotlib import style
 # plt.show()
 # ----------------
 # Signal 9:
-# start = -5
-# end = 10
-# x1 = np.linspace(start, end, end - start + 1)
-# y1 = np.exp(3 * ((-5 * x1) - 7)) * np.heaviside(((-5 * x1) - 7) + 2, 1) + 2 * (np.heaviside(((-5 * x1) - 7), 1) - np.heaviside(((-5 * x1) - 7) - 1, 1))
-# style.use('ggplot')
-# plt.stem(x1, y1)
-# plt.title('9')
-# plt.xlabel('X-Axis')
-# plt.ylabel('Y-Axis')
-# plt.legend()
-# plt.show()
-# ----------------
-# Signal 10:
+start = -5
+end = 10
+x1 = np.linspace(start, end, end - start + 1)
+x1new = ((-5 * x1) - 7)
+y1 = -2 * (np.exp(3 * x1new) * np.heaviside(x1new + 2, 1) + 2 * (np.heaviside(x1, 1) - np.heaviside(x1 - 1, 1)))
 style.use('ggplot')
-start = -np.pi
-end = np.pi
-step = 0.01
-x1 = np.linspace(start, end, int((end - start) / step))
-y1 = np.sin(-x1 + 3)
-plt.plot(x1, y1)
-plt.title('10')
+plt.stem(x1, y1)
+plt.title('9')
 plt.xlabel('X-Axis')
 plt.ylabel('Y-Axis')
 plt.legend()
 plt.show()
+# ----------------
+# Signal 10:
+# style.use('ggplot')
+# start = -np.pi
+# end = np.pi
+# step = 0.01
+# x1 = np.linspace(start, end, int((end - start) / step))
+# y1 = np.sin(-x1 + 3)
+# plt.plot(x1, y1)
+# plt.title('10')
+# plt.xlabel('X-Axis')
+# plt.ylabel('Y-Axis')
+# plt.legend()
+# plt.show()
 # ----------------
